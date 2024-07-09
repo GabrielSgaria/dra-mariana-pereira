@@ -70,11 +70,11 @@ export function NavBar() {
                                 </button>
                                 <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
                                     onClick={() => scrollToSection("services")}>
-                                    Metodologia
+                                    Serviços
                                 </button>
                                 <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
                                     onClick={() => scrollToSection("portfolio")}>
-                                    Portfólio
+                                    Localização
                                 </button>
                                 <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
                                     onClick={() => scrollToSection("questions")}>
