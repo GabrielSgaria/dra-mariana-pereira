@@ -40,7 +40,7 @@ export function NavBar() {
                         initial={{ opacity: 0, y: -30, scale: 0.7 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 0.2 }}
-                        className="w-36">
+                        className="w-48">
 
                         <Link href="/" onClick={closeMenu}>
                             <Image
@@ -49,6 +49,8 @@ export function NavBar() {
                                 src="/image/logo/logo1.png"
                                 alt="Logo Principal"
                                 className="object-cover w-full"
+                                quality={100}
+                                priority={true}
                             />
                         </Link>
                     </motion.div>
@@ -62,19 +64,19 @@ export function NavBar() {
                                 className={`flex min-w-0 flex-row items-center justify-center text-base ${isMenuOpen ? "flex-col gap-16 " : "flex-row gap-9"
                                     }`}
                             >
-                                <button className="rounded-xl transition-all duration-200 text-zinc-bg-zinc-950 font-semibold text-base uppercase px-2"
+                                <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
                                     onClick={() => scrollToSection("about")}>
                                     Quem somos?
                                 </button>
-                                <button className="rounded-xl transition-all duration-200 text-zinc-bg-zinc-950 font-semibold text-base uppercase px-2"
+                                <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
                                     onClick={() => scrollToSection("services")}>
                                     Metodologia
                                 </button>
-                                <button className="rounded-xl transition-all duration-200 text-zinc-bg-zinc-950 font-semibold text-base uppercase px-2"
+                                <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
                                     onClick={() => scrollToSection("portfolio")}>
                                     Portfólio
                                 </button>
-                                <button className="rounded-xl transition-all duration-200 text-zinc-bg-zinc-950 font-semibold text-base uppercase px-2"
+                                <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
                                     onClick={() => scrollToSection("questions")}>
                                     Perguntas frequentes
                                 </button>
