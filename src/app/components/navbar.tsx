@@ -33,7 +33,7 @@ export function NavBar() {
                     <div className="flex h-9 w-9 items-center justify-center lg:hidden">
                         <DotsHorizontalIcon
                             onClick={handleMenuToggle}
-                            className="size-8 text-marromCami hover:size-9 focus:outline-none lg:hidden"
+                            className="size-8 text-pink-900 hover:size-9 focus:outline-none lg:hidden"
                         />
                     </div>
                     <motion.div
@@ -56,12 +56,12 @@ export function NavBar() {
                     </motion.div>
 
                     <div
-                        className={`lg:flex lg:items-center lg:gap-8 ${isMenuOpen ? "flex" : "hidden"
+                        className={`lg:flex lg:items-center lg:gap-8 ${isMenuOpen ? "flex  pb-10 border-b border-pink-900/60 w-full" : "hidden"
                             }`}
                     >
                         <nav className="md:flex grow justify-center">
                             <div
-                                className={`flex min-w-0 flex-row items-center justify-center text-base ${isMenuOpen ? "flex-col gap-16 " : "flex-row gap-9"
+                                className={`flex min-w-0 flex-row items-center justify-center text-base ${isMenuOpen ? "flex-col gap-6" : "flex-row gap-9"
                                     }`}
                             >
                                 <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"

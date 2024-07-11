@@ -73,15 +73,15 @@ export default function Home() {
                 "Olá! Vim através do site da Cami Agência Criativa."
               )
             }
-            className="px-3 py-2 font-bold text-base sm:text-5xl text-pink-900 justify-center text-center">
+            className="px-3 py-2 font-bold text-3xl sm:text-5xl text-pink-900 justify-center text-center ">
             Método Skin Perfect
           </button>
           <div className="flex flex-col gap-5 justify-center items-center my-4 max-w-[950px] px-3">
-            <h1 className="font-bold text-pink-900 sm:text-2xl text-base text-center">Desenvolvi o método SkinPerfect pensando nas necessidades específicas da sua pele, trazendo resultados surpreendentes e duradouros.</h1>
-            <h1 className="font-bold text-pink-900 sm:text-2xl text-base text-center">Vou te explicar como ele funciona, passo a passo.</h1>
+            <h1 className="font-bold text-pink-900 sm:text-2xl text-lg text-center">Desenvolvi o método SkinPerfect pensando nas necessidades específicas da sua pele, trazendo resultados surpreendentes e duradouros.</h1>
+            <h1 className="font-bold text-pink-900 sm:text-2xl text-lg text-center">Vou te explicar como ele funciona, passo a passo.</h1>
           </div>
 
-          <div>
+          <div className="px-3">
             <motion.ul
               initial={{ opacity: 0, y: -30, scale: 0.7 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -112,7 +112,7 @@ export default function Home() {
               {/* <h1 className="font-bold text-pink-950 text-xl sm:text-xl ">
                 Resultados
               </h1> */}
-              <p className="font-bold text-pink-900 text-base sm:text-lg">
+              <p className="font-bold text-pink-900 text-lg">
                 O método SkinPerfect é um tratamento completo e eficaz, feito sob medida para você que busca uma pele mais bonita e saudável.
               </p>
               <button
@@ -122,7 +122,7 @@ export default function Home() {
                   "Olá Dra. Mariana! Quero agendar o tratamento SkinPerfect."
                 )
               }
-              className="mt-10 hover:bg-pink-900/90 w-full shadow-xl sm:py-3 sm:px-8 px-3 py-2 rounded-3xl bg-pink-900 font-bold text-base sm:text-2xl text-zinc-50 transition-all">
+              className="mt-10 hover:bg-pink-900/90 w-full shadow-xl sm:py-3 sm:px-8 px-3 py-2 rounded-3xl bg-pink-900 font-bold text-lg sm:text-2xl text-zinc-50 transition-all">
               Agende sua consulta e descubra como transformar sua pele com SkinPerfect!
             </button>
                
