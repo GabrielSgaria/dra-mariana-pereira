@@ -66,16 +66,9 @@ export default function Home() {
 
       <section className="pt-16" id="services">
         <div className="container mx-auto flex flex-col text-brancoCami justify-center items-center gap-8" >
-          <button
-            onClick={() =>
-              sendMensage(
-                554197514990,
-                "Olá! Vim através do site da Cami Agência Criativa."
-              )
-            }
-            className="px-3 py-2 font-bold text-3xl sm:text-5xl text-pink-900 justify-center text-center ">
+          <div className="px-3 py-2 font-bold text-3xl sm:text-5xl text-pink-900 justify-center text-center ">
             Método Skin Perfect
-          </button>
+          </div>
           <div className="flex flex-col gap-5 justify-center items-center my-4 max-w-[950px] px-3">
             <h1 className="font-bold text-pink-900 sm:text-2xl text-lg text-center">Desenvolvi o método SkinPerfect pensando nas necessidades específicas da sua pele, trazendo resultados surpreendentes e duradouros.</h1>
             <h1 className="font-bold text-pink-900 sm:text-2xl text-lg text-center">Vou te explicar como ele funciona, passo a passo.</h1>
