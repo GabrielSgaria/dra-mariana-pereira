@@ -2,7 +2,10 @@
 import Image from "next/image";
 import { sendMensage } from "./lib/actions";
 import { Heart } from "@phosphor-icons/react";
-import { GiSyringe, GiLips, GiNails,  } from 'react-icons/gi';
+import { GiSyringe, GiLips, GiNails, } from 'react-icons/gi';
+import { motion } from "framer-motion";
+import { CardPassos } from "./components/card-steps";
+import { texts } from "./lib/textosCardsPassos";
 
 
 export default function Home() {
@@ -61,7 +64,79 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="flex flex-col md:flex-row items-center h-full gap-5 w-full container mx-auto mt-20 px-5 ">
+      <section className="pt-16" id="services">
+        <div className="container mx-auto flex flex-col text-brancoCami justify-center items-center gap-8" >
+          <button
+            onClick={() =>
+              sendMensage(
+                554197514990,
+                "Olá! Vim através do site da Cami Agência Criativa."
+              )
+            }
+            className="px-3 py-2 font-bold text-base sm:text-5xl text-pink-900 justify-center text-center">
+            Método Skin Perfect
+          </button>
+          <div className="flex flex-col gap-5 justify-center items-center my-4 max-w-[950px] px-3">
+            <h1 className="font-bold text-pink-900 sm:text-2xl text-base text-center">Desenvolvi o método SkinPerfect pensando nas necessidades específicas da sua pele, trazendo resultados surpreendentes e duradouros.</h1>
+            <h1 className="font-bold text-pink-900 sm:text-2xl text-base text-center">Vou te explicar como ele funciona, passo a passo.</h1>
+          </div>
+
+          <div>
+            <motion.ul
+              initial={{ opacity: 0, y: -30, scale: 0.7 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              exit='hidden'
+              className="containerUl flex flex-col sm:grid sm:grid-flow-row gap-3 sm:grid-cols-2 sm:gap-4 gap-y-5 sm:py-8 sm:px-1 ">
+
+              {texts.map((texts, index) => (
+                <motion.li key={index} className='flex flex-col sm:flex-row items-center gap-4'>
+                  <CardPassos
+                    srcIcon={texts.srcIcon}
+                    altIcon={texts.altIcon}
+                    tituloCardPassos={texts.title}
+                    textoCardPassos={texts.text}
+                  />
+
+                </motion.li>
+              ))}
+
+            </motion.ul>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: -30, scale: 0.7 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            className="w-full sm:w-8/12 h-full text-center items-center">
+            <div className="w-full items-center justify-center flex flex-col px-3">
+              {/* <h1 className="font-bold text-pink-950 text-xl sm:text-xl ">
+                Resultados
+              </h1> */}
+              <p className="font-bold text-pink-900 text-base sm:text-lg">
+                O método SkinPerfect é um tratamento completo e eficaz, feito sob medida para você que busca uma pele mais bonita e saudável.
+              </p>
+              <button
+              onClick={() =>
+                sendMensage(
+                  554135516675,
+                  "Olá Dra. Mariana! Quero agendar o tratamento SkinPerfect."
+                )
+              }
+              className="mt-10 hover:bg-pink-900/90 w-full shadow-xl sm:py-3 sm:px-8 px-3 py-2 rounded-3xl bg-pink-900 font-bold text-base sm:text-2xl text-zinc-50 transition-all">
+              Agende sua consulta e descubra como transformar sua pele com SkinPerfect!
+            </button>
+               
+            </div>
+          </motion.div>
+        </div>
+
+      </section>
+
+
+
+
+
+      {/* <section className="flex flex-col md:flex-row items-center h-full gap-5 w-full container mx-auto mt-20 px-5 ">
 
         <div className="flex items-end justify-center h-full">
           <Image
@@ -106,7 +181,7 @@ export default function Home() {
           </div>
         </div>
 
-      </section>
+      </section> */}
 
       <section className="flex flex-col items-center h-full gap-5 w-full container mx-auto py-16 md:mt-20 px-5 sm:px-0">
         <div className="flex w-full flex-col gap-5 items-center justify-center">
