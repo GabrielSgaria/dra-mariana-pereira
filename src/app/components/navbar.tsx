@@ -46,7 +46,7 @@ export function NavBar() {
                             <Image
                                 width={800}
                                 height={800}
-                                src="/image/logo/logo1.png"
+                                src="/image/soon/logo1.png"
                                 alt="Logo Principal"
                                 className="object-cover w-full"
                                 quality={100}
@@ -66,15 +66,15 @@ export function NavBar() {
                             >
                                 <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
                                     onClick={() => scrollToSection("about")}>
-                                    Quem somos?
+                                    Método Skin Perfect
                                 </button>
                                 <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
                                     onClick={() => scrollToSection("services")}>
-                                    Serviços
+                                    Dra. Mariana
                                 </button>
                                 <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
                                     onClick={() => scrollToSection("portfolio")}>
-                                    Localização
+                                    Resultados
                                 </button>
                                 <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
                                     onClick={() => scrollToSection("questions")}>

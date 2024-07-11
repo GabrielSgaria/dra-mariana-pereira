@@ -29,7 +29,7 @@ export function Footer() {
         }
     };
     return (
-        <footer id="contacts" className=" border-t-[1px] border-neutral-200 pb-8 font-sans mt-10 bg-pink-50">
+        <footer id="contacts" className=" border-t-[1px] border-neutral-200 pb-8 font-sans bg-pink-50">
             <div className="container mx-auto mt-16 flex flex-col gap-16 sm:flex-row sm:justify-around sm:gap-0">
                 <div className="flex flex-col items-center sm:items-start ">
                     <h1 className="text-3xl font-semibold bebasNeue text-neutral-800">
@@ -117,7 +117,7 @@ export function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="container mx-auto mt-16 flex h-8 cursor-pointer items-center justify-center space-x-2 text-neutral-500 transition-all  hover:font-semibold hover:text-zinc-950">
+            <div className="container mx-auto mt-16 flex h-8 cursor-pointer items-center justify-center space-x-2 text-neutral-500 duration-700 transition-all hover:font-normal hover:text-zinc-950">
                 <h1 className="max-w-[300px] text-sm sm:text-start ">
                     <Link target="blank" href="https://www.sgariatech.com.br">
                         Desenvolvido por Sgaria Tech

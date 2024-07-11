@@ -1,9 +1,8 @@
 'use client'
 import Image from "next/image";
-import Link from "next/link";
 import { sendMensage } from "./lib/actions";
-import { Heart, Syringe } from "@phosphor-icons/react";
-import { GiSyringe, GiLips, GiTread, GiNails, GiFishingNet, GiYarn, GiFootprint } from 'react-icons/gi';
+import { Heart } from "@phosphor-icons/react";
+import { GiSyringe, GiLips, GiNails,  } from 'react-icons/gi';
 
 
 export default function Home() {
@@ -34,7 +33,7 @@ export default function Home() {
           <div className="flex items-end justify-center h-full">
             <Image
               alt='Foto Mari'
-              src='/image/dra/2.jpeg'
+              src='/image/doctor/2.jpeg'
               width={600}
               height={600}
               quality={100}
@@ -45,6 +44,7 @@ export default function Home() {
         </div>
       </section>
       <div className="w-full h-full lg:h-7 bg-pink-900/90 flex gap-7 py-10 md:px-10 overflow-hidden ">
+
         <div className="container mx-auto flex h-full gap-5 lg:gap-10 lg:justify-around justify-center items-center uppercase flex-col lg:flex-row">
           <div className="flex items-center justify-center gap-2 text-pink-200 font-bold text-base sm:text-lg md:text-xl">
             <GiSyringe className="font-extrabold size-6 md:size-7" />
@@ -55,16 +55,8 @@ export default function Home() {
             <span>Lavien</span>
           </div>
           <div className="flex items-center justify-center gap-2 text-pink-200 font-bold text-base sm:text-lg md:text-xl">
-            <GiYarn className="font-extrabold size-6 md:size-7" />
-            <span>Fios de Sustentação</span>
-          </div>
-          <div className="flex items-center justify-center gap-2 text-pink-200 font-bold text-base sm:text-lg md:text-xl">
             <GiLips className="font-extrabold size-6 md:size-7" />
             <span>Preenchimento Labial</span>
-          </div>
-          <div className="flex items-center justify-center gap-2 text-pink-200 font-bold text-base sm:text-lg md:text-xl ">
-            <GiFootprint className="font-extrabold size-6 md:size-7" />
-            <span>Alongamento de unha em acrílico</span>
           </div>
         </div>
       </div>
@@ -116,7 +108,7 @@ export default function Home() {
 
       </section>
 
-      <section className="flex flex-col items-center h-full gap-5 w-full container mx-auto mt-10 md:mt-20 px-5 sm:px-0">
+      <section className="flex flex-col items-center h-full gap-5 w-full container mx-auto py-16 md:mt-20 px-5 sm:px-0">
         <div className="flex w-full flex-col gap-5 items-center justify-center">
           <span className="text-4xl md:text-7xl font-normal text-pink-900 flex text-center">Dra. Mariana <br />Pereira</span>
         </div>
@@ -124,7 +116,7 @@ export default function Home() {
           <div className="flex items-end justify-center h-full">
             <Image
               alt='Foto Mari'
-              src='/image/dra/3.jpeg'
+              src='/image/doctor/3.jpeg'
               width={600}
               height={600}
               quality={100}
@@ -159,11 +151,20 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <section className="flex flex-col items-center justify-between h-screen">
-        <div className="flex w-full flex-col gap-5">
-          <h1 className="text-3xl font-normal text-pink-700 mt-10 text-center">DEPOIMENTOS</h1>
+
+      <section className="w-full h-full mt-16">
+        <div className="flex items-center justify-center w-full px-5 md:px-0 h-[850px] gap-10 bg-center bg-cover bg-no-repeat bg-[url('/image/location/clinic.jpeg')]">
+          <div className="w-full md:w-1/2 flex flex-col gap-5 text-center bg-pink-50 py-10 px-5 md:px-12 rounded-xl shadow-2xl" >
+            <p className="text-lg text-pink-900">
+              Muito mais que uma clínica, a Clínica da Dra. Mariana Pereira, localizada na
+              <span className="font-bold"> R. Rio Solimões, 507 - Jardim Weissópolis, Pinhais - PR</span>,
+              oferece um ambiente acolhedor e sofisticado. Aqui, a harmonia do design encontra a serenidade,
+              criando um espaço dedicado ao seu relaxamento, autocuidado e transformação.
+              Venha descobrir um local onde cada detalhe foi pensado para proporcionar uma experiência única e personalizada.
+            </p>
+          </div>
         </div>
-      </section> */}
+      </section>
     </main>
   );
 }
