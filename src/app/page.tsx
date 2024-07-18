@@ -1,12 +1,65 @@
 'use client'
 import Image from "next/image";
+import { useState } from "react";
 import { sendMensage } from "./lib/actions";
-import { Heart } from "@phosphor-icons/react";
 import { GiSyringe, GiLips, GiNails, } from 'react-icons/gi';
 import { motion } from "framer-motion";
 import { CardPassos } from "./components/card-steps";
 import { texts } from "./lib/textosCardsPassos";
+import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 
+const slides = [
+  '/image/before-and-after/1.jpeg',
+  '/image/before-and-after/2.jpeg',
+  '/image/before-and-after/3.jpeg',
+  '/image/before-and-after/4.jpeg',
+  '/image/before-and-after/5.jpeg',
+  '/image/before-and-after/6.jpeg',
+
+
+];
+
+const SlideShow = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  return (
+    <div className="relative w-[90%] h-[400px] lg:h-[500px] 2xl:h-[600px] overflow-hidden ">
+      {slides.map((slide, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: index === currentSlide ? 1 : 0 }}
+          transition={{ duration: 0.5 }}
+          className={`absolute inset-0 w-full h-full  ${index === currentSlide ? "block" : "hidden"}`}
+        >
+          <Image
+            src={slide}
+            alt={`Slide ${index + 1}`}
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            priority={true}
+            className="w-full h-full rounded-2xl"
+          />
+        </motion.div>
+      ))}
+      <button onClick={prevSlide} className="absolute left-1 top-1/2 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm p-1 rounded-full">
+        <ArrowLeftIcon className="text-pink-800 size-8" />
+      </button>
+      <button onClick={nextSlide} className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-white/80 backdrop-blur-sm p-1 rounded-full">
+        <ArrowRightIcon className="text-pink-800 size-8" />
+      </button>
+    </div>
+  );
+};
 
 export default function Home() {
   return (
@@ -90,10 +143,8 @@ export default function Home() {
                     tituloCardPassos={texts.title}
                     textoCardPassos={texts.text}
                   />
-
                 </motion.li>
               ))}
-
             </motion.ul>
           </div>
           <motion.div
@@ -102,121 +153,23 @@ export default function Home() {
             transition={{ duration: 0.3 }}
             className="w-full sm:w-8/12 h-full text-center items-center">
             <div className="w-full items-center justify-center flex flex-col px-3">
-              {/* <h1 className="font-bold text-pink-950 text-xl sm:text-xl ">
-                Resultados
-              </h1> */}
               <p className="font-bold text-pink-900 text-lg">
                 O método SkinPerfect é um tratamento completo e eficaz, feito sob medida para você que busca uma pele mais bonita e saudável.
               </p>
+              <h1 className="mt-10 mb-4 font-bold text-2xl md:text-4xl text-pink-900"> Veja os resultados do antes e depois</h1>
+              <SlideShow />
               <button
-              onClick={() =>
-                sendMensage(
-                  554135516675,
-                  "Olá Dra. Mariana! Quero agendar o tratamento SkinPerfect."
-                )
-              }
-              className="mt-10 hover:bg-pink-900/90 w-full shadow-xl sm:py-3 sm:px-8 px-3 py-2 rounded-3xl bg-pink-900 font-bold text-lg sm:text-2xl text-zinc-50 transition-all">
-              Agende sua consulta e descubra como transformar sua pele com SkinPerfect!
-            </button>
-               
+                onClick={() =>
+                  sendMensage(
+                    554135516675,
+                    "Olá Dra. Mariana! Quero agendar o tratamento SkinPerfect."
+                  )
+                }
+                className="mt-10 hover:bg-pink-900/90 w-full shadow-xl sm:py-3 sm:px-8 px-3 py-2 rounded-3xl bg-pink-900 font-bold text-lg sm:text-xl text-zinc-50 transition-all">
+                Agende sua consulta e descubra como transformar sua pele com SkinPerfect!
+              </button>
             </div>
           </motion.div>
-        </div>
-
-      </section>
-
-
-
-
-
-      {/* <section className="flex flex-col md:flex-row items-center h-full gap-5 w-full container mx-auto mt-20 px-5 ">
-
-        <div className="flex items-end justify-center h-full">
-          <Image
-            alt='Foto Mari'
-            src='/image/procedure/botox-antes-depois.jpeg'
-            width={600}
-            height={600}
-            quality={100}
-            priority={true}
-            className="w-80 h-80 object-cover object-top lg:h-full lg:w-[549px] rounded-xl shadow-2xl"
-          />
-        </div>
-
-        <div className="flex w-full flex-col gap-5 items-center justify-center">
-          <div className="flex items-center justify-center flex-col mb-5">
-            <h2 className="text-3xl md:text-5xl font-normal text-pink-800">Método</h2>
-            <h1 className="text-3xl md:text-5xl font-bold text-pink-900">Skin Perfect</h1>
-          </div>
-          <div className="text-center text-xl flex flex-col gap-3 max-w-[790px] text-pink-950">
-            <p>
-              Quer ter uma <span className="font-bold">pele perfeita?</span> Conheça o meu método <span className="font-bold">Skin Perfect </span>
-              Um tratamento global da face, <span className="font-bold">desenvolvido por mim</span>, para manter a pele sempre saudável, bonita, evitar linhas de expressão e estar <span className="font-bold">sempre bem cuidada!</span>
-            </p>
-            <p>
-              Dentro do método, cuidamos da pele com <span className="font-bold">peelings</span>, cremes para <span className="font-bold">manter a skincare em casa</span>, cápsulas para tomar,
-              bioestimulador de colágeno, fios de sustentação, e claro, <span className="font-bold">linhas específicas para cada paciente</span>.
-            </p>
-            <p >
-              O <span className="font-bold">Skin Perfect</span> foi desenvolvido com muito estudo e dedicação, por mim, especialmente pra você, que sonha em ter e manter uma pele sempre iluminada!
-              <span className="flex w-full items-center justify-center mt-3 font-bold gap-3"><Heart weight="fill" className="text-pink-600 size-6" /> Gostou? </span>
-            </p>
-            <button
-              onClick={() =>
-                sendMensage(
-                  554135516675,
-                  "Olá Dra. Mariana! Vim através do seu site."
-                )
-              }
-              className="mt-5 hover:bg-pink-900/90 w-full shadow-xl sm:py-3 sm:px-8 px-3 py-2 rounded-3xl bg-pink-900 font-bold text-base sm:text-2xl text-zinc-50 transition-all">
-              Entre em contato e saiba mais
-            </button>
-          </div>
-        </div>
-
-      </section> */}
-
-      <section className="flex flex-col items-center h-full gap-5 w-full container mx-auto py-16 md:mt-20 px-5 sm:px-0">
-        <div className="flex w-full flex-col gap-5 items-center justify-center">
-          <span className="text-4xl md:text-7xl font-normal text-pink-900 flex text-center">Dra. Mariana <br />Pereira</span>
-        </div>
-        <div className="w-full h-full flex flex-col mt-5 lg:flex-row justify-around items-center lg:-mt-16">
-          <div className="flex items-end justify-center h-full">
-            <Image
-              alt='Foto Mari'
-              src='/image/doctor/3.jpeg'
-              width={600}
-              height={600}
-              quality={100}
-              priority={true}
-              className="w-80 h-80 object-cover object-top lg:h-full lg:w-96 lg:rounded-t-full lg:rounded-none rounded-full shadow-2xl"
-            />
-          </div>
-          <div className="flex flex-col items-start justify-center h-full mt-10">
-            <div className="max-w-[650px] flex flex-col gap-5 h-full justify-center">
-
-              <span className="text-lg sm:text-xl text-pink-950 text-justify ">
-                Com mais de 10 anos de experiência dedicados à arte da estética,
-                Dra. Mariana Pereira é uma profissional renomada que combina paixão e expertise em seus serviços.
-                Especialista em estética natural e elegante, ela é reconhecida pelo Método Skin Perfect, que promove resultados autênticos e duradouros.
-                Além de seus serviços exclusivos, Dra. Mariana oferece cursos inspiradores, atendimentos personalizados e mentorias especializadas.
-                Descubra a beleza que reflete sua essência única com Dra. Mariana Pereira.
-              </span>
-
-              <div className="mt-5">
-                <button
-                  onClick={() =>
-                    sendMensage(
-                      554135516675,
-                      "Olá Dra. Mariana! Vim através do seu site."
-                    )
-                  }
-                  className="hover:bg-pink-900/90 w-full shadow-xl sm:py-3 sm:px-8 px-3 py-2 rounded-3xl bg-pink-900 font-bold text-base sm:text-2xl text-zinc-50 transition-all">
-                  Agendar horário
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
