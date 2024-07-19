@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: 'https://sa-east-1.graphassets.com/clwqlca22006e07lv6chcfoo8/clxknt8uv089x07kdxn6a2qb5',
+        url: 'https://sa-east-1.graphassets.com/clwqlca22006e07lv6chcfoo8/clysrmnlm0mo207kjjsc3jg27',
         width: 1250,
         height: 1250,
       }
