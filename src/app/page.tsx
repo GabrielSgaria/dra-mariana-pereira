@@ -78,7 +78,7 @@ export default function Home() {
                 onClick={() =>
                   sendMensage(
                     554135516675,
-                    "Olá! Vim através do site da Cami Agência Criativa."
+                    "Olá Dra. Mariana! Quero agendar o tratamento SkinPerfect."
                   )
                 }
                 className="hover:bg-pink-900/90 w-full mb-10 lg:mb-0 lg:w-2/3 shadow-xl md:py-3 md:px-8 px-3 py-2 rounded-3xl bg-pink-900 hover:bg-verdeCami/90 font-bold text-base sm:text-2xl text-zinc-50 transition-all">
@@ -117,7 +117,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="pt-16" id="services">
+      <section className="pt-16" id="method">
         <div className="container mx-auto flex flex-col text-brancoCami justify-center items-center gap-8" >
           <div className="px-3 py-2 font-bold text-3xl sm:text-5xl text-pink-900 justify-center text-center ">
             Método Skin Perfect
@@ -152,7 +152,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.3 }}
             className="w-full sm:w-8/12 h-full text-center items-center">
-            <div className="w-full items-center justify-center flex flex-col px-3">
+            <div className="w-full items-center justify-center flex flex-col px-3" id="results">
               <p className="font-bold text-pink-900 text-lg">
                 O método SkinPerfect é um tratamento completo e eficaz, feito sob medida para você que busca uma pele mais bonita e saudável.
               </p>
@@ -173,7 +173,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full h-full mt-16">
+      <section className="w-full h-full mt-16" id="clinic">
         <div className="flex items-center justify-center w-full px-5 md:px-0 h-[850px] gap-10 bg-center bg-cover bg-no-repeat bg-[url('/image/location/clinic.jpeg')]">
           <div className="w-full md:w-1/2 flex flex-col gap-5 text-center bg-pink-50 py-10 px-5 md:px-12 rounded-xl shadow-2xl" >
             <p className="text-lg text-pink-900">

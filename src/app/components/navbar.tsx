@@ -65,20 +65,20 @@ export function NavBar() {
                                     }`}
                             >
                                 <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
-                                    onClick={() => scrollToSection("about")}>
+                                    onClick={() => scrollToSection("method")}>
                                     Método Skin Perfect
                                 </button>
                                 <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
-                                    onClick={() => scrollToSection("services")}>
-                                    Dra. Mariana
-                                </button>
-                                <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
-                                    onClick={() => scrollToSection("portfolio")}>
+                                    onClick={() => scrollToSection("results")}>
                                     Resultados
                                 </button>
                                 <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
-                                    onClick={() => scrollToSection("questions")}>
-                                    Perguntas frequentes
+                                    onClick={() => scrollToSection("clinic")}>
+                                    A clinica
+                                </button>
+                                <button className="rounded-xl transition-all duration-200 text-pink-900 font-semibold text-base uppercase px-2"
+                                    onClick={() => scrollToSection("contacts")}>
+                                    Contatos
                                 </button>
 
                             </div>
