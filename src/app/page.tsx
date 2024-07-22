@@ -102,7 +102,7 @@ export default function Home() {
       <div className="w-full h-full lg:h-7 bg-pink-900/90 flex gap-7 py-10 md:px-10 overflow-hidden ">
 
         <div className="container mx-auto flex h-full gap-5 lg:gap-10 lg:justify-around justify-center items-center uppercase flex-col lg:flex-row">
-          <div className="flex items-center justify-center gap-2 text-pink-200 font-bold text-base sm:text-lg md:text-xl">
+          {/* <div className="flex items-center justify-center gap-2 text-pink-200 font-bold text-base sm:text-lg md:text-xl">
             <GiSyringe className="font-extrabold size-6 md:size-7" />
             <span>Botox</span>
           </div>
@@ -113,6 +113,10 @@ export default function Home() {
           <div className="flex items-center justify-center gap-2 text-pink-200 font-bold text-base sm:text-lg md:text-xl">
             <GiLips className="font-extrabold size-6 md:size-7" />
             <span>Preenchimento Labial</span>
+          </div> */}
+          <div className="flex items-center justify-center gap-2 text-pink-200 font-bold text-base sm:text-lg md:text-xl">
+            <GiSyringe className="font-extrabold size-6 md:size-7" />
+            <span>Especialista em Harmonização Facial</span>
           </div>
         </div>
       </div>
