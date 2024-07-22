@@ -4,18 +4,19 @@ import "./globals.css";
 import { NavBar } from "./components/navbar";
 import { Footer } from "./components/footer";
 import { ButtonWhatsAppFixed } from "./components/button-whatsapp-fixed";
+import logo from '../../public/image/favicon.jpeg'
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Clínica Dra. Mariana Pereira - Estética Avançada",
   description: "Beleza Personalizada com Dra. Mariana Pereira - Resultados incríveis, mantendo sua essência.",
-  icons: "/favicon.png",
-  metadataBase: new URL("https://www.drmarianapereira.com.br"),
+  icons: "/favicon.jpeg",
+  metadataBase: new URL("https://www.marianapereiradra.com.br"),
   openGraph: {
     title: "Clínica Dra. Mariana Pereira - Estética Avançada",
     description: "Beleza Personalizada com Dra. Mariana Pereira - Resultados incríveis, mantendo sua essência.",
-    url: "https://www.drmarianapereira.com.br",
+    url: "https://www.marianapereiradra.com.br",
     siteName: "Clínica Dra. Mariana Pereira - Estética Avançada",
     locale: "pt_BR",
     type: "website",
