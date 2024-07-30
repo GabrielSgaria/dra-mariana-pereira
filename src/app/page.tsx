@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { sendMensage } from "./lib/actions";
-import { GiSyringe, GiLips, GiNails, } from 'react-icons/gi';
+import { GiSyringe } from 'react-icons/gi';
 import { motion } from "framer-motion";
 import { CardPassos } from "./components/card-steps";
 import { texts } from "./lib/textosCardsPassos";
@@ -89,7 +89,7 @@ export default function Home() {
           <div className="flex items-end justify-center h-full">
             <Image
               alt='Foto Mari'
-              src='/image/doctor/2.jpeg'
+              src='/image/doctor/6.jpeg'
               width={600}
               height={600}
               quality={100}
